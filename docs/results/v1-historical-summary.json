@@ -1,0 +1,42 @@
+{
+  "benchmark_version": "dndx_public_self_test",
+  "timestamp": "2026-09-01T13:04:01.579879",
+  "sample_count": 2000,
+  "seed": 20260625,
+  "backend": "v3",
+  "performance": {
+    "avg_ttft_ms": 60.449,
+    "avg_throughput_tokens_per_sec": 680.489
+  },
+  "timing": {
+    "benchmark_elapsed_seconds": 228.225,
+    "benchmark_elapsed_minutes": 3.804,
+    "avg_seconds_per_sample": 0.114
+  },
+  "accuracy": {
+    "score": 0.8065,
+    "correct": 1613,
+    "total": 2000
+  },
+  "public_validation": {
+    "passed": true,
+    "failed_samples": 0
+  },
+  "source": {
+    "member": "v1.0/result_dev_en.json",
+    "sha256": "031ca63976b27e007dab457b61a642e6e36ea24c1a9ff77a2026e3c36e8a1f95",
+    "status": "historical artifact, not independently reproduced",
+    "dataset": "mmbench_dev_en.tsv",
+    "hardware": "not recorded in artifact",
+    "runtime_versions": "not recorded in artifact"
+  },
+  "record_crosscheck": {
+    "record_count": 2000,
+    "correct": 1613,
+    "accuracy": 0.8065,
+    "avg_ttft_ms_from_rounded_records": 60.449,
+    "avg_throughput_from_rounded_records": 680.489,
+    "failed_samples": 0,
+    "note": "Record metrics were rounded before serialization. Summary means can differ in their last digit."
+  }
+}

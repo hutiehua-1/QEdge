@@ -1,0 +1,2 @@
+# Pure host-side tests only; no GPU runtime imported by these tests.
+numpy

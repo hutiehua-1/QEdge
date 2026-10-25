@@ -1,0 +1,15 @@
+# Install accelerator vendor's compatible PyTorch/Triton/FlashAttention builds FIRST.
+# Versions below are intentionally not pinned: the original runtime lock is unavailable.
+# This list is a dependency inventory, not a validated portable environment lock.
+torch
+transformers
+Pillow
+numpy
+safetensors
+triton
+flash-attn
+flashinfer-python
+flash-linear-attention
+# Optional acceleration; see docs/installation.md:
+# causal-conv1d
+# xxhash
