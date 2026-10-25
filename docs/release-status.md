@@ -16,10 +16,10 @@
 ## 尚未完成
 
 - 未在 PPU 上重新安装/推理，也未运行算子对照或性能消融。
-- GitHub Actions 已配置，尚未在远端执行；不能把本地主机测试说成远端 CI 已通过。
+- GitHub Actions 已在提交 `75c0e62baba6017690f2395b679ad511dda0415a` 上通过，运行记录：https://github.com/hutiehua-1/QEdge/actions/runs/40208333390 。该结果只覆盖主机检查。
 - 原包没有项目级许可证或完整改编来源清单，最终 LICENSE 和版权主体待作者确认。
 - 目标仓库为 https://github.com/hutiehua-1/QEdge 。本文件描述发布候选的验证状态，上传结果以远端提交和本次交付记录为准。
-- GitHub 写入授权现已生效，README 初始提交为 `7aee174cec38babad789ec1c928ecd00b5e04d68`。完整发布文件的上传与 CI 结果以远端最新提交为准。
-- 上游贡献产物位于交付包旁的 `upstream-contributions/`，FLA 示例修复有补丁和验证，实际 PR 状态以本次交付记录为准。
+- GitHub 写入授权现已生效，68 个项目文件已上传；首个完整提交为 `75c0e62baba6017690f2395b679ad511dda0415a`。
+- FLA 示例修复已创建草稿 PR：https://github.com/fla-org/flash-linear-attention/pull/1584 。完整上游 pre-commit 和设备验证尚未完成，因此保留草稿状态。
 
 本地项目可以供评审和继续开发，不能将上述未完成项隐去后标注为“已正式发布且可完整复现”。
