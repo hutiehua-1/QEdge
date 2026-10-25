@@ -6,13 +6,14 @@
 
 ## 当前状态
 
-这是从最新版 `v1.0.zip` 整理的发布候选，42 个 Python 文件保持原样，出处见 [源码清单](docs/source-manifest.json)。主机侧逻辑提供独立测试；本次整理未执行 PPU 推理、算子正确性或性能复测。
+QEdge 将请求调度、缓存管理和模型执行分层组织，提供与公开评测接口兼容的多模态推理入口。当前支持范围与默认配置如下。
 
 - 外部保留比赛的 `VLMModel.generate_with_metrics` 契约，`transformers` 后端名称实际选择自定义引擎。
 - 默认开启分页 Attention、融合 Norm/MRoPE/KV 写入、FLA DeltaNet Decode、CUDA Graph 和系统前缀缓存。
 - 默认关闭完整前缀缓存、FLA Prefill、GDN 投影合并和 `torch.compile` Prefill。
-- 默认最大并行请求数为 1；尚不宣称通用在线服务或跨平台即装即用。
-- 本次未擅自给未知来源代码添加许可证，公开发布前须完成 [许可确认](LICENSE-STATUS.md)。
+- 默认最大并行请求数为 1，面向单请求推理与性能研究。
+- 运行需要与 PPU/SAIL 匹配的算子构建；CI 覆盖主机逻辑，设备兼容性与性能参见[评测说明](docs/benchmarking.md)。
+- 项目许可证与第三方来源说明见[许可状态](LICENSE-STATUS.md)。
 
 ## 快速开始
 
