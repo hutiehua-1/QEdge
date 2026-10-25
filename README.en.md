@@ -2,11 +2,11 @@
 
 An experimental Qwen3.5-2B multimodal inference engine from a DNDX tuning project, targeting a T-Head PPU / SAIL-compatible environment. [中文说明](README.md).
 
-The release candidate preserves 42 original Python source files. It includes a scheduler, paged KV management, hybrid recurrent-state handling, multimodal prefix identity, fused operations, and a benchmark-compatible wrapper.
+QEdge separates scheduling, cache management, and model execution. It includes paged KV management, hybrid recurrent-state handling, multimodal prefix identity, fused operations, and a benchmark-compatible wrapper.
 
 ## Status and requirements
 
-The accelerator runtime has **not** been reproduced during this packaging work. The dependency file is an inventory, not a tested lock file. Follow the [installation notes](docs/installation.md) and use compatible vendor builds; do not overwrite them with generic CUDA wheels. Full prefix caching and FLA prefill are disabled by default. Default maximum concurrency is one request.
+CI covers host-side logic; accelerator compatibility and performance require validation in the target environment. The dependency file lists required packages without a validated version lock. Follow the [installation notes](docs/installation.md) and use compatible vendor builds. Full prefix caching and FLA prefill are disabled by default. Default maximum concurrency is one request.
 
 ## Host-only checks
 
