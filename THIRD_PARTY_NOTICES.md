@@ -15,4 +15,4 @@
 | [NumPy](https://github.com/numpy/numpy)、[Pillow](https://github.com/python-pillow/Pillow) | 主机数据与图片 |
 | [python-xxhash](https://github.com/ifduyue/python-xxhash) | 可选块哈希 |
 
-项目名、算法相似或 API 兼容不能证明独立创作，也不能证明复制。本次保持原源码内容，逐文件 SHA256 在 `docs/source-manifest.json`。作者需进一步提供改编来源；确认前不能把本文件当作完整 NOTICE 合规证明。
+项目名、算法相似或 API 兼容不能证明独立创作，也不能证明复制。作者需进一步提供改编来源；确认前不能把本文件当作完整 NOTICE 合规证明。

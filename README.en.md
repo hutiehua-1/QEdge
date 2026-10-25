@@ -6,7 +6,7 @@ QEdge separates scheduling, cache management, and model execution. It includes p
 
 ## Status and requirements
 
-CI covers host-side logic; accelerator compatibility and performance require validation in the target environment. The dependency file lists required packages without a validated version lock. Follow the [installation notes](docs/installation.md) and use compatible vendor builds. Full prefix caching and FLA prefill are disabled by default. Default maximum concurrency is one request.
+CI covers host-side logic; accelerator compatibility and performance require validation in the target environment. The dependency file lists required packages without a validated version lock. Use vendor-compatible builds of PyTorch, Triton, FlashAttention, FlashInfer and FLA. Full prefix caching and FLA prefill are disabled by default. Default maximum concurrency is one request.
 
 ## Host-only checks
 
@@ -20,7 +20,7 @@ These checks exercise real host-side modules without importing the accelerator-d
 
 ## Public development benchmark
 
-Obtain the model and public MMBench development data separately; see [data sources](docs/data.md). In a prepared accelerator environment:
+Obtain the model and public MMBench development data separately; use the official [Qwen model](https://huggingface.co/Qwen/Qwen3.5-2B) and [MMBench repository](https://github.com/open-compass/MMBench). In a prepared accelerator environment:
 
 ```bash
 python benchmark_public.py --dataset-path ./datasets/mmbench/mmbench_dev_en.tsv --model-path ./Qwen3.5-2B --backend transformers --num-samples 20 --output result_dev_en.json
