@@ -110,10 +110,6 @@ class FLAGatedDeltaNet(nn.Module):
         query = query.reshape(batch, seq_len, -1, ref.head_k_dim)
         key = key.reshape(batch, seq_len, -1, ref.head_k_dim)
         value = value.reshape(batch, seq_len, -1, ref.head_v_dim)
-        if ref.num_v_heads // ref.num_k_heads > 1:
-            repeats = ref.num_v_heads // ref.num_k_heads
-            query = query.repeat_interleave(repeats, dim=2)
-            key = key.repeat_interleave(repeats, dim=2)
 
         recurrent = (
             cache_params.layers[ref.layer_idx].recurrent_states[0] if cached else None
